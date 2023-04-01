@@ -7,15 +7,13 @@ app.get("/", function (req, res) {
   res.send("Yay Node!");
 });
 
-app.get("/server", (req, res) => {
-  axios.get("http://localhost:3000/sausages").then();
-});
+// app.get("/server", (req, res) => {
+//   axios.get("http://localhost:8080/sausages").then();
+// });
 
 // req is the Request object, res is the Response object
 // (these are just variable names, they can be anything but it's a convention to call them req and res)
-app.get("/", function (req, res) {
-  res.json({ Hello: "World!" });
-});
+
 app.get("/server", function (req, res) {
   res.json({ Mm: "server :O" });
 });
@@ -28,13 +26,9 @@ app.get("/", function (req, res) {
   res.status(200).send("Welcome to Laxmi's API!!! Mitch here");
 });
 
-// app.listen(3000, function () {
-//   console.log("Server is listening on port 3000. Ready to accept requests!");
-// });
-
-const PORT = 3000;
+const PORT = 8080;
 app.listen(PORT, function () {
-  console.log("Server is listening on port 3000. Ready to accept request!");
+  console.log(`Server is listening on port ${PORT}. Ready to accept request!`);
 });
 
 // Yes, I understand all these terms.
